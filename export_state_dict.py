@@ -1,10 +1,10 @@
 import torch
 
-pth_ckpt_orig = 'my/logs/folder/logs/DRUNet/lightning_logs/'
-pth_target = '/some/folder/logs_experiments/currated/'
+pth_ckpt_orig = 'logs/DNCNN/lightning_logs/DNCNN_R_nch_3_seed_0_ljr_0.01_jt_nonsymmetric_nit_20_loss_l1_lr_0.0001_sigma_0-50_single/'
+pth_target = 'logs/DNCNN/lightning_logs/'
 
 # Initial checkpoint file (.ckpt extension)
-pth_ckpt_orig_spe = pth_ckpt_orig+'checkpoints/epoch=2999-step=822000.ckpt'
+pth_ckpt_orig_spe = pth_ckpt_orig+'checkpoints/epoch=2999-step=51000.ckpt'
 
 # Load checkpoint
 ckpt_orig = torch.load(pth_ckpt_orig_spe, map_location=torch.device('cpu'))

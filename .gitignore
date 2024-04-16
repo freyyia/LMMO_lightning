@@ -18,3 +18,7 @@ venv/
 
 *.ipynb_checkpoints
 
+wandb/*
+images/*
+logs/*
+results/*

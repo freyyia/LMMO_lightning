@@ -36,7 +36,7 @@ def PPnP_LMMO():
     config_defaults = {
         'dataset_path': '../bregman_sampling/BregmanPnP/datasets',
         'dataset_name': 'set3c',
-        'select_image' : 2,
+        'select_image' : 1,
         'patch_size': 256,
 
         'inverse_problem': 'deblurring',
@@ -44,7 +44,7 @@ def PPnP_LMMO():
         
         'iterations': 1000000,
         'n_samples_saved': 2000,
-        'delta_frac': 2,
+        'delta_frac': 150,
         'noise_lvl_denoiser': 20,
         'blur_mode': 'levin',
         'kernel_path' : "../bregman_sampling/Prox_GSPnP/PnP_restoration/kernels",

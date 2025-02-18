@@ -44,14 +44,14 @@ def PPnP_LMMO():
         
         'iterations': 1000000,
         'n_samples_saved': 2000,
-        'delta_frac': 2,
+        'delta_frac': 20,
         'noise_lvl_denoiser': 20,
         'blur_mode': 'levin',
         'kernel_path' : "../bregman_sampling/Prox_GSPnP/PnP_restoration/kernels",
         'kernel_name' : "Levin09.mat",
         'kernel_size': 9,
         'kernel_std' : 3, # 3.0 if blur_mode == 'Gaussian' else 0.5
-        'kernel' : 9, 
+        'kernel' : 4, 
         'alpha': 1.0,
         'C_upper_lim': 1.,
         'C_lower_lim': 0.,

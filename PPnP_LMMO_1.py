@@ -44,7 +44,7 @@ def PPnP_LMMO():
         
         'iterations': 1000000,
         'n_samples_saved': 2000,
-        'delta_frac': 150,
+        'delta_frac': 20,
         'noise_lvl_denoiser': 20,
         'blur_mode': 'levin',
         'kernel_path' : "../bregman_sampling/Prox_GSPnP/PnP_restoration/kernels",

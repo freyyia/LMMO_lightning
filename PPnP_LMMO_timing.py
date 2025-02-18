@@ -40,7 +40,7 @@ def PPnP_LMMO():
         'inverse_problem': 'deblurring',
         'alpha_poisson': 20,
         
-        'iterations': 1000,
+        'iterations': 10000,
         'n_samples_saved': 2000,
         'delta_frac': 0.99,
         'noise_lvl_denoiser': 20,
@@ -249,7 +249,6 @@ def PPnP_LMMO():
                "Noisy image" : wandb.Image((noisy_im/torch.max(noisy_im)).cpu().squeeze(), caption="Noisy image"),
                "Posterior mean" : wandb.Image(Xk.cpu().squeeze(), caption="Rec. Image")})
 
-    # init welford
 
     text_file = open(path_save + '/timing_results.txt', "w+")
     text_file.write('Launch PPnP-ULA with LMMO!')
@@ -307,7 +306,7 @@ def PPnP_LMMO():
  
     # print timing results
     text_file = open(path_save + '/timing_results.txt', "a")
-    text_file.write('Iteration [{}/{}] Total: {:.2f} (s), Per Iter : {:.2f} (s)\n'.format(N, elapsed_time, elapsed_time / N))
+    text_file.write('Iteration [{}/{}] Total: {:.6f} (s), Per Iter : {:.6f} (s)\n'.format(N,N, elapsed_time, elapsed_time / N))
     text_file.close()
 
     wandb.finish()
